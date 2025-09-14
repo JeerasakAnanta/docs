@@ -1,0 +1,269 @@
+.sitemapPage {
+  padding: 2rem 0 4rem 0;
+  min-height: 80vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sitemapContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #2563eb;
+}
+
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sectionLink {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sectionLink:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.sectionDescription {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionMeta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.priority,
+.changefreq {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.children {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.childrenTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.childrenList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.childItem {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.childItem:hover {
+  background: #e9ecef;
+  transform: translateX(4px);
+}
+
+.childLink {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.childLink:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.childDescription {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.xmlSitemap {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  color: white;
+  text-align: center;
+}
+
+.xmlTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.xmlDescription {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+/* Dark theme support */
+[data-theme='dark'] .title {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .subtitle {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .section {
+  background: #2d3748;
+  border: 1px solid #4a5568;
+}
+
+[data-theme='dark'] .sectionLink {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .sectionLink:hover {
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .sectionDescription {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .priority,
+[data-theme='dark'] .changefreq {
+  background: #4a5568;
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .children {
+  border-top-color: #4a5568;
+}
+
+[data-theme='dark'] .childrenTitle {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .childItem {
+  background: #4a5568;
+}
+
+[data-theme='dark'] .childItem:hover {
+  background: #2d3748;
+}
+
+[data-theme='dark'] .childLink {
+  color: #60a5fa;
+}
+
+[data-theme='dark'] .childLink:hover {
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .childDescription {
+  color: #a0aec0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sitemapPage {
+    padding: 1rem 0 2rem 0;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .section {
+    padding: 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+  
+  .sectionMeta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .xmlSitemap {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .childItem {
+    padding: 0.75rem;
+  }
+  
+  .xmlSitemap {
+    padding: 1rem;
+  }
+}

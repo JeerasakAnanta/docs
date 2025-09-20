@@ -93,7 +93,7 @@ export function readAllMarkdownFiles(dirPath, type = 'docs') {
           ...data,
           type: type === 'blog' ? 'บล็อก' : 'เอกสาร',
           url: type === 'blog' ? `/blog/${data.slug}` : `/docs/${data.slug}`,
-          icon: type === 'blog' ? '📝' : '📚'
+          iconType: type === 'blog' ? 'FileText' : 'BookOpen'
         };
       }
       return null;

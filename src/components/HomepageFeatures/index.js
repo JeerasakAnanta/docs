@@ -1,35 +1,24 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
+import React from "react";
+import clsx from "clsx";
+import styles from "./styles.module.css";
+import { Book, Pencil, Atom } from "lucide-react";
 
 export default function HomepageFeatures() {
   const FeatureList = [
     {
-      title: 'Documentation',
-      emoji: '🚀',
-      description: (
-        <>
-          Documentation
-        </>
-      ),
+      title: "Documentation",
+      icon: <Book size={40} />, // Lucide Book icon
+      description: <>Documentation</>,
     },
     {
-      title: 'Blog',
-      emoji: '📝',
-      description: (
-        <>
-          Blog
-        </>
-      ),
+      title: "Blog",
+      icon: <Pencil size={40} />, // Lucide Pencil icon
+      description: <>Blog</>,
     },
     {
-      title: 'Wiki',
-      emoji: '⚛️',
-      description: (
-        <>
-          Wiki
-        </>
-      ),
+      title: "Wiki",
+      icon: <Atom size={40} />, // Lucide Atom icon
+      description: <>Wiki</>,
     },
   ];
 
@@ -46,11 +35,11 @@ export default function HomepageFeatures() {
   );
 }
 
-function Feature({ emoji, title, description }) {
+function Feature({ icon, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
-        <div className={styles.featureEmoji}>{emoji}</div>
+        <div className={styles.featureEmoji}>{icon}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

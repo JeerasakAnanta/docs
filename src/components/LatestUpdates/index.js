@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import { FileText, BookOpen, Calendar, Newspaper, File } from 'lucide-react';
 
 // Import auto-generated data
 import latestUpdatesData from '../../data/latestUpdates.json';
@@ -17,7 +18,7 @@ export default function LatestUpdates() {
       url: update.url,
       date: update.date,
       type: update.type,
-      icon: update.icon,
+      iconType: update.iconType,
       tags: update.tags,
       authors: update.authors
     }));
@@ -40,7 +41,8 @@ export default function LatestUpdates() {
             <div className="col col--12">
               <div className={styles.header}>
                 <h2 className={styles.title}>
-                  📰 เอกสารอัปเดตล่าสุด
+                  <Newspaper size={24} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                  เอกสารอัปเดตล่าสุด
                 </h2>
                 <p className={styles.subtitle}>
                   กำลังโหลดข้อมูล...
@@ -60,7 +62,8 @@ export default function LatestUpdates() {
           <div className="col col--12">
             <div className={styles.header}>
               <h2 className={styles.title}>
-                📰 เอกสารอัปเดตล่าสุด
+                <Newspaper size={24} style={{ marginRight: '8px', verticalAlign: 'middle' }} />
+                เอกสารอัปเดตล่าสุด
               </h2>
               <p className={styles.subtitle}>
                 เอกสารและบทความล่าสุด {latestUpdates.length} รายการ
@@ -72,7 +75,9 @@ export default function LatestUpdates() {
           {latestUpdates.length > 0 ? (
             latestUpdates.map((update, idx) => (
               <div key={idx} className={styles.updateItem}>
-                <div className={styles.itemIcon}>{update.icon}</div>
+                <div className={styles.itemIcon}>
+                  {update.iconType === 'FileText' ? <FileText size={20} /> : <BookOpen size={20} />}
+                </div>
                 <div className={styles.itemContent}>
                   <div className={styles.itemHeader}>
                     <h3 className={styles.itemTitle}>
@@ -87,7 +92,8 @@ export default function LatestUpdates() {
                   </p>
                   <div className={styles.itemFooter}>
                     <span className={styles.itemDate}>
-                      📅 {update.date}
+                      <Calendar size={16} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+                      {update.date}
                     </span>
                     {update.tags && update.tags.length > 0 && (
                       <div className={styles.itemTags}>
@@ -104,7 +110,7 @@ export default function LatestUpdates() {
             ))
           ) : (
             <div className={styles.updateItem}>
-              <div className={styles.itemIcon}>📄</div>
+              <div className={styles.itemIcon}><File size={20} /></div>
               <div className={styles.itemContent}>
                 <div className={styles.itemHeader}>
                   <h3 className={styles.itemTitle}>
@@ -119,7 +125,8 @@ export default function LatestUpdates() {
                 </p>
                 <div className={styles.itemFooter}>
                   <span className={styles.itemDate}>
-                    📅 {new Date().toISOString().split('T')[0]}
+                    <Calendar size={16} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+                    {new Date().toISOString().split('T')[0]}
                   </span>
                 </div>
               </div>
@@ -129,7 +136,7 @@ export default function LatestUpdates() {
         <div className="row">
           <div className="col col--12">
             <div className={styles.viewAll}>
-              <a href="/docs/intro" className="button button--primary button--lg">
+              <a href="/docs/intro" className="button button--primary button--lg text-white ">
                 ดูเอกสารทั้งหมด
               </a>
             </div>
